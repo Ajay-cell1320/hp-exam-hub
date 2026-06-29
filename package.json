@@ -1,0 +1,12 @@
+{
+  "name": "hp-exam-hub",
+  "version": "1.0.0",
+  "description": "Premier Prep Portal for HP Exams",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
