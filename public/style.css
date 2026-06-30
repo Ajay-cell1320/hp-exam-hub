@@ -381,3 +381,76 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* ================= PREMIUM EXAM HUB ENHANCEMENTS ================= */
+
+/* 1. Base Notification Card Styling */
+.exam-hub-notification {
+    background: #ffffff !important;
+    border-left: 5px solid #0056b3 !important; /* Premium Blue Accent Line */
+    margin-bottom: 16px !important;
+    padding: 16px 20px !important;
+    border-radius: 12px !important; /* Soft Rounded Corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important; /* Soft Premium Shadow */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important; /* Smooth Transition */
+    position: relative;
+    overflow: hidden;
+}
+
+/* 2. Floating Effect on Hover/Touch */
+.exam-hub-notification:hover {
+    transform: translateY(-4px) !important; /* Halka sa upar uthega */
+    box-shadow: 0 12px 20px rgba(0, 86, 179, 0.1) !important; /* Rich Glow Shadow */
+    border-left-color: #007bff !important; /* Accent color bright hoga */
+}
+
+/* 3. Dhadakta Hua (Pulse) NEW Badge */
+.exam-hub-notification span[style*="background: #ff4d4d"] {
+    background: linear-gradient(135deg, #ff4d4d, #ff1a1a) !important;
+    padding: 4px 8px !important;
+    font-size: 10px !important;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border-radius: 4px !important;
+    box-shadow: 0 2px 6px rgba(255, 77, 77, 0.4);
+    animation: hubPulse 2s infinite !important; /* Animation Trigger */
+}
+
+@keyframes hubPulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 77, 77, 0.7); }
+    70% { transform: scale(1.03); box-shadow: 0 0 0 6px rgba(255, 77, 77, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 77, 77, 0); }
+}
+
+/* 4. Beautiful Glass-Style Buttons */
+.exam-hub-notification button, 
+.exam-hub-notification a[style*="background"] {
+    border-radius: 8px !important; /* Rounded Buttons */
+    padding: 8px 18px !important;
+    font-size: 13px !important;
+    transition: all 0.2s ease-in-out !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
+}
+
+/* Apply Now Button Hover */
+.exam-hub-notification button:hover {
+    background: #004085 !important;
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 86, 179, 0.3) !important;
+}
+
+/* Apply Online Button Hover */
+.exam-hub-notification a[style*="background: #007bbf"]:hover,
+.exam-hub-notification a[style*="background: #007bff"]:hover {
+    background: #0062cc !important;
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3) !important;
+}
+
+/* View PDF Button Hover */
+.exam-hub-notification a[style*="background: #f1f3f5"]:hover {
+    background: #e2e6ea !important;
+    color: #212529 !important;
+    border-color: #adb5bd !important;
+}
