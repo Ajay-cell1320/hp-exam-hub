@@ -337,37 +337,119 @@ function printHubForm2() {
                     </ul>
                 </div>
 
-                <!-- Box 2: Admit Cards -->
-                <div class="update-box">
-                    <div class="box-header admit-header">🎫 Admit Cards</div>
-                    <ul class="update-list">
-                        <li><a href="#">Download HP Patwari Written Exam Admit Card</a></li>
-                        <li><a href="#">TGT Commission Screening Test Call Letter Link</a></li>
-                        <li><a href="#">State TET Verification Roll Numbers List</a></li>
-                    </ul>
-                </div>
+<!-- ==================== HP EXAM HUB LIVE SEARCH & 2-COLUMN GRID DASHBOARD START ==================== -->
+<div class="hub-premium-wrapper" style="background: #ffffff; max-width: 500px; margin: 15px auto; padding: 20px 15px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); font-family: 'Segoe UI', -apple-system, sans-serif;">
+    
+    <!-- 1. HEADER TITLE -->
+    <div style="text-align: center; margin-bottom: 20px;">
+        <h1 style="font-size: 26px; font-weight: 800; color: #1a1a1a; margin: 0 0 8px 0; letter-spacing: -0.5px;">Today I Am Looking For!!!!</h1>
+        <p style="font-size: 12px; color: #666; line-height: 1.4; margin: 0; padding: 0 5px;">
+            Free Online Mock Tests | Latest HP Jobs | Study Material | HP Exam Test Series and More
+        </p>
+    </div>
 
-                <!-- Box 3: Results -->
-                <div class="update-box">
-                    <div class="box-header result-header">🏆 Exam Results</div>
-                    <ul class="update-list">
-                        <li><a href="#">Final Selection List for HP PGT Commission</a> <span class="new-tag">New</span></li>
-                        <li><a href="#">Written Exam Scorecard for JBT Posts</a></li>
-                        <li><a href="#">Patwari Preliminary Merit List & Cut-off Marks</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- 2. LIVE SEARCH ENGINE BAR -->
+    <div style="margin-bottom: 20px; padding: 0 2px;">
+        <input type="text" id="hubSearchInput" onkeyup="filterHubDashboard()" placeholder="🔍 Kripya yahan search karein (e.g. GK, Jobs, Results)..." style="width: 100%; padding: 12px 16px; border: 2px solid #e0e0e0; border-radius: 14px; font-size: 14px; outline: none; transition: all 0.3s ease; box-sizing: border-box; background: #f8f9fa;">
+    </div>
 
-    <!-- 4. TARGET EXAM MODULES (Patwari, TGT, PGT) -->
-    <section class="features" id="exams">
-        <div class="container">
-            <div class="section-title">
-                <h2>Target Exam Modules</h2>
-                <p>Select your stream to find structured resources and study material.</p>
-            </div>
-            
+    <!-- 3. PREMIUM 2-COLUMN GRID SYSTEM (AMNE-SAMNE LAYOUT) -->
+    <div id="hubGridContainer" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
+
+        <!-- 1. HP Govt Jobs -->
+        <a href="#hp-jobs" class="hub-grid-item" data-title="hp govt jobs latest bharti recruitment" style="text-decoration: none; background: #f4f8ff; padding: 18px 10px; border-radius: 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid #eef2f9; transition: transform 0.2s ease;">
+            <div style="font-size: 30px; margin-bottom: 6px;">🔍</div>
+            <span style="font-size: 13px; font-weight: 700; color: #222;">HP Govt Jobs</span>
+        </a>
+
+        <!-- 2. All India Jobs -->
+        <a href="#all-india-jobs" class="hub-grid-item" data-title="all india jobs central government recruitment" style="text-decoration: none; background: #f4f8ff; padding: 18px 10px; border-radius: 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid #eef2f9; transition: transform 0.2s ease;">
+            <div style="font-size: 30px; margin-bottom: 6px;">💼</div>
+            <span style="font-size: 13px; font-weight: 700; color: #222;">All India Jobs</span>
+        </a>
+
+        <!-- 3. HP GK -->
+        <a href="#hp-gk" class="hub-grid-item" data-title="hp gk himachal pradesh general knowledge notes" style="text-decoration: none; background: #f4f8ff; padding: 18px 10px; border-radius: 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid #eef2f9; transition: transform 0.2s ease;">
+            <div style="font-size: 30px; margin-bottom: 6px;">💡</div>
+            <span style="font-size: 13px; font-weight: 700; color: #222;">HP GK</span>
+        </a>
+
+        <!-- 4. Previous Paper -->
+        <a href="#previous-papers" class="hub-grid-item" data-title="previous paper old question papers download" style="text-decoration: none; background: #f4f8ff; padding: 18px 10px; border-radius: 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid #eef2f9; transition: transform 0.2s ease;">
+            <div style="font-size: 30px; margin-bottom: 6px;">📄</div>
+            <span style="font-size: 13px; font-weight: 700; color: #222;">Previous Paper</span>
+        </a>
+
+        <!-- 5. Current Affairs -->
+        <a href="#current-affairs" class="hub-grid-item" data-title="current affairs daily monthly updates magazine" style="text-decoration: none; background: #f4f8ff; padding: 18px 10px; border-radius: 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid #eef2f9; transition: transform 0.2s ease;">
+            <div style="font-size: 30px; margin-bottom: 6px;">📰</div>
+            <span style="font-size: 13px; font-weight: 700; color: #222;">Current Affairs</span>
+        </a>
+
+        <!-- 6. Notifications -->
+        <a href="#notifications" class="hub-grid-item" data-title="notifications updates alerts exam dates" style="text-decoration: none; background: #f4f8ff; padding: 18px 10px; border-radius: 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid #eef2f9; transition: transform 0.2s ease;">
+            <div style="font-size: 30px; margin-bottom: 6px;">🔔</div>
+            <span style="font-size: 13px; font-weight: 700; color: #222;">Notifications</span>
+        </a>
+
+        <!-- 7. Results -->
+        <a href="#results" class="hub-grid-item" data-title="results merit list cut off scores scorecard" style="text-decoration: none; background: #f4f8ff; padding: 18px 10px; border-radius: 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid #eef2f9; transition: transform 0.2s ease;">
+            <div style="font-size: 30px; margin-bottom: 6px;">📊</div>
+            <span style="font-size: 13px; font-weight: 700; color: #222;">Results</span>
+        </a>
+
+        <!-- 8. HP GK QA -->
+        <a href="#hp-gk-qa" class="hub-grid-item" data-title="hp gk qa question answer series solved" style="text-decoration: none; background: #f4f8ff; padding: 18px 10px; border-radius: 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid #eef2f9; transition: transform 0.2s ease;">
+            <div style="font-size: 30px; margin-bottom: 6px;">📝</div>
+            <span style="font-size: 13px; font-weight: 700; color: #222;">HP GK QA</span>
+        </a>
+
+        <!-- 9. HP GK MCQ -->
+        <a href="#hp-gk-mcq" class="hub-grid-item" data-title="hp gk mcq mock test practice multiple choice" style="text-decoration: none; background: #f4f8ff; padding: 18px 10px; border-radius: 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid #eef2f9; transition: transform 0.2s ease;">
+            <div style="font-size: 30px; margin-bottom: 6px;">🧠</div>
+            <span style="font-size: 13px; font-weight: 700; color: #222;">HP GK MCQ</span>
+        </a>
+
+        <!-- 10. Ebooks -->
+        <a href="#ebooks" class="hub-grid-item" data-title="ebooks pdf download books digital library study material" style="text-decoration: none; background: #f4f8ff; padding: 18px 10px; border-radius: 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid #eef2f9; transition: transform 0.2s ease;">
+            <div style="font-size: 30px; margin-bottom: 6px;">📚</div>
+            <span style="font-size: 13px; font-weight: 700; color: #222;">Ebooks</span>
+        </a>
+
+    </div>
+</div>
+
+<!-- 4. INTELLIGENT REAL-TIME FILTER JAVASCRIPT -->
+<script>
+function filterHubDashboard() {
+    var input = document.getElementById('hubSearchInput').value.toLowerCase();
+    var gridItems = document.getElementsByClassName('hub-grid-item');
+    
+    for (var i = 0; i < gridItems.length; i++) {
+        var searchKeywords = gridItems[i].getAttribute('data-title');
+        if (searchKeywords.includes(input)) {
+            gridItems[i].style.display = "flex"; // Agar keyword match hua toh dikhao
+        } else {
+            gridItems[i].style.display = "none"; // Nahi toh chhipa (hide) do
+        }
+    }
+}
+
+// Search bar focus effects
+document.getElementById('hubSearchInput').addEventListener('focus', function() {
+    this.style.borderColor = '#0056b3';
+    this.style.background = '#ffffff';
+    this.style.boxShadow = '0 0 10px rgba(0,86,185,0.15)';
+});
+document.getElementById('hubSearchInput').addEventListener('blur', function() {
+    this.style.borderColor = '#e0e0e0';
+    this.style.background = '#f8f9fa';
+    this.style.boxShadow = 'none';
+});
+</script>
+<!-- ==================== HP EXAM HUB LIVE SEARCH & 2-COLUMN GRID DASHBOARD END ==================== -->
+               
+ 
             <div class="grid-layout">
                 <!-- Card 1: Patwari -->
                 <div class="card">
